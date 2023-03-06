@@ -9,7 +9,7 @@
 // 被去除第⼀个参数；
 // 3. 将 obj 的原型指向构造函数，这样 obj 就可以访问到构造函数原型中的属性；
 // 4. 使⽤ apply，改变构造函数 this 的指向到新建的对象，这样 obj 就可以访问到构造函数中的属性；
-// 5. 判断构造函数有没有返回值，有的话返回 返回值，没有的话返回对象；
+// 5. 判断构造函数返回值是不是object，有的话返回 返回值，没有的话返回对象；
 function objectFactory() {
     const obj = new Object();
     Constructor = [].shift.call(arguments);
